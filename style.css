@@ -1,0 +1,91 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Container to center the content */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Server Status Container */
+.status-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Server Status Box Styling */
+.server-status {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    width: 270px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.server-status:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.server-status h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.server-status p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Status Indicator Styling */
+.server-status span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Colors for Status */
+.online {
+    color: #28a745; /* Green */
+}
+
+.offline {
+    color: #dc3545; /* Red */
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #666;
+}
+
+footer p {
+    margin: 0;
+}
