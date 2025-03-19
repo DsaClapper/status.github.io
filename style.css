@@ -15,6 +15,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     transition: all 500ms;
+    overflow: hidden;
 }
 
 h1 {
