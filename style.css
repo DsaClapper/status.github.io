@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: #f5f5f5;
     color: #333;
     display: flex;
@@ -14,6 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
+    transition: all 500ms;
 }
 
 h1 {
@@ -46,7 +47,7 @@ h1 {
     padding: 25px;
     width: 270px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
 .server-status:hover {
@@ -58,11 +59,13 @@ h1 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #333;
+    transition: all 500ms;
 }
 
 .server-status p {
     font-size: 1rem;
     margin-bottom: 10px;
+    transition: all 500ms;
 }
 
 /* Status Indicator Styling */
@@ -73,19 +76,82 @@ h1 {
 
 /* Colors for Status */
 .online {
-    color: #28a745; /* Green */
+    color: #28a745;
+    /* Green */
 }
 
 .offline {
-    color: #dc3545; /* Red */
+    color: #dc3545;
+    /* Red */
 }
 
 footer {
     margin-top: 30px;
     font-size: 1rem;
     color: #666;
+    transition: all 500ms;
 }
 
 footer p {
     margin: 0;
+}
+
+
+/* Sun/Moon animation */
+
+
+#center,
+#mask-rays,
+#mask-center {
+    transform-origin: center;
+    transition: transform 500ms ease-out;
+    cursor: pointer;
+    border: none;
+}
+#center {
+    fill: #000;
+    transform: rotate(-35deg);
+}
+#rays {
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+#sunmoon.dark #center {
+    transform: rotate(-35deg) scale(2);
+}
+#sunmoon.dark #mask-rays {
+    transform: scale(0.5);
+}
+#sunmoon.dark #mask-center {
+    transform: translateX(-18px);
+}
+
+.theme-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+body.dark {
+    background-color: #1f1e1e;
+}
+
+.server-status h2.dark {
+    color: #cccaca;
+}
+
+h1.dark {
+    color: #cccaca;
+}
+
+footer.dark {
+    color: #838282;
+}
+
+.server-status.dark {
+    background-color: rgb(49, 49, 49);
+}
+.server-status p.dark {
+    color: #cccaca;
 }
