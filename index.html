@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Server Status</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -10,7 +12,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="application-name" content="Halalas Services Status">
 <meta name="apple-mobile-web-app-title" content="Halalas Services Status">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="currentColor">
 </head>
 <body>
 
@@ -50,6 +52,12 @@
         </footer>
     </div>
 
+    <script>
+        function setBodyHeight() {
+    document.body.style.height = window.innerHeight + "px";
+}
+setBodyHeight();
+</script>
     <script src="script.js"></script>
 </body>
 </html>
