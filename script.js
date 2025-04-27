@@ -44,8 +44,7 @@ async function updateStatus() {
     // const server2Data = await getServerStatus('halalas-cloud');
     changeStatus();
 }
-
-async function changeStatus() {
+function changeStatus() {
     const server1StatusText = document.getElementById('server1-status-text');
     const server2StatusText = document.getElementById('server2-status-text');
 
