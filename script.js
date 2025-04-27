@@ -49,20 +49,18 @@ async function changeStatus() {
     const server1StatusText = document.getElementById('server1-status-text');
     const server2StatusText = document.getElementById('server2-status-text');
 
-    const server1Data = await getServerStatus('mikenug');
-    const server2Data = await getServerStatus('halalas-cloud');
-
-    setTimeout(() => {
     // Update Server 1
-    server1StatusText.textContent = server1Data.status;
-    server1StatusText.classList.remove('online', 'offline');
-    server1StatusText.classList.add(server1Data.status.toLowerCase());
+    getServerStatus('mikenug').then((status) => {
+        server1StatusText.textContent = status.status;
+        server1StatusText.classList.remove('online', 'offline');
+        server1StatusText.classList.add(status.status.toLowerCase());
+    });
 
-    // Update Server 2
-    server2StatusText.textContent = server2Data.status;
-    server2StatusText.classList.remove('online', 'offline');
-    server2StatusText.classList.add(server2Data.status.toLowerCase());
-    }, 250)
+    getServerStatus('halalas-cloud').then((status) => {
+        server2StatusText.textContent = status.status;
+        server2StatusText.classList.remove('online', 'offline');
+        server2StatusText.classList.add(status.status.toLowerCase());
+    });
 }
 
 // Update status every 10 seconds
